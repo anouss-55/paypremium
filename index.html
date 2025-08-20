@@ -1,0 +1,129 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PayPremium — Accès Premium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --border:#e2e8f0;
+      --brand:#2563eb; /* bleu style Stripe */
+      --brand-ink:#1e40af;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    .wrap{max-width:980px;margin:0 auto;padding:28px 16px 56px}
+    /* Header minimal */
+    .header{display:flex;align-items:center;gap:12px;margin:6px 0 18px}
+    .logo{height:28px;width:auto;display:none} /* mets logo.png si tu veux l'afficher */
+    .brand{font-weight:700;letter-spacing:.2px}
+    /* Panel héro */
+    .panel{
+      background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px;
+      box-shadow:0 1px 2px rgba(15,23,42,.04)
+    }
+    .head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:10px}
+    h1{margin:0 0 6px;font-size:22px;line-height:1.25}
+    .sub{margin:0;color:var(--muted)}
+    /* Grid plans minimal */
+    .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+    @media (max-width:900px){.plans{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:560px){.plans{grid-template-columns:1fr}}
+    .card{
+      background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;
+      display:flex;flex-direction:column;gap:8px
+    }
+    .kicker{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:.08em}
+    .title{font-weight:700}
+    .price{font-weight:700}
+    .desc{color:#64748b;font-size:13px;min-height:36px}
+    .btn{
+      display:inline-block;text-align:center;padding:10px 14px;border-radius:8px;text-decoration:none;
+      background:var(--brand);color:#fff;font-weight:600;border:1px solid #1f5bdc;
+      transition:transform .06s ease, box-shadow .2s ease; box-shadow:0 1px 0 rgba(2,6,23,.04)
+    }
+    .btn:hover{background:var(--brand-ink)}
+    .note{font-size:12px;color:#64748b}
+    footer{margin-top:26px;text-align:center;color:#94a3b8;font-size:12px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <!-- Si tu veux afficher ton logo, upload 'logo.png' à la racine et enlève style display:none -->
+      <img src="logo.png" alt="PayPremium" class="logo" style="display:none;">
+      <div class="brand">PayPremium</div>
+    </header>
+
+    <section class="panel">
+      <div class="head">
+        <div>
+          <h1>Accès Premium — Formules</h1>
+          <p class="sub">Choisissez l’adhésion qui vous convient. Paiement sécurisé, confirmation immédiate.</p>
+        </div>
+      </div>
+
+      <div class="plans">
+        <article class="card">
+          <div class="kicker">Essai</div>
+          <div class="title">Adhésion 7 Jours</div>
+          <div class="price">9,99 €</div>
+          <p class="desc">Découverte sans engagement pendant 7 jours.</p>
+          <a class="btn" href="https://whop.com/checkout/plan_RCgOhNeY5BifK?d2c=true" rel="noopener">Souscrire</a>
+          <div class="note">Prix TTC. Email de confirmation envoyé.</div>
+        </article>
+
+        <article class="card">
+          <div class="kicker">Mensuel</div>
+          <div class="title">Adhésion 1 Mois</div>
+          <div class="price">19,99 €</div>
+          <p class="desc">Accès complet pendant 30 jours.</p>
+          <a class="btn" href="https://whop.com/checkout/plan_KmKVPTFPvFvLg?d2c=true" rel="noopener">Souscrire</a>
+          <div class="note">Prix TTC. Email de confirmation envoyé.</div>
+        </article>
+
+        <article class="card">
+          <div class="kicker">Trimestriel</div>
+          <div class="title">Adhésion 3 Mois</div>
+          <div class="price">39,99 €</div>
+          <p class="desc">Formule économique sur 3 mois.</p>
+          <a class="btn" href="https://whop.com/checkout/plan_MyZtbGpwIk5Tp?d2c=true" rel="noopener">Souscrire</a>
+          <div class="note">Prix TTC. Email de confirmation envoyé.</div>
+        </article>
+
+        <article class="card">
+          <div class="kicker">Semestriel</div>
+          <div class="title">Adhésion 6 Mois</div>
+          <div class="price">59,99 €</div>
+          <p class="desc">Meilleur rapport durée/prix.</p>
+          <a class="btn" href="https://whop.com/checkout/plan_kn5jI23gVr7xm?d2c=true" rel="noopener">Souscrire</a>
+          <div class="note">Prix TTC. Email de confirmation envoyé.</div>
+        </article>
+
+        <article class="card">
+          <div class="kicker">Annuel</div>
+          <div class="title">Adhésion 12 Mois</div>
+          <div class="price">99,99 €</div>
+          <p class="desc">Accès premium toute l’année.</p>
+          <a class="btn" href="https://whop.com/checkout/plan_MXfMfeENXoSct?d2c=true" rel="noopener">Souscrire</a>
+          <div class="note">Prix TTC. Email de confirmation envoyé.</div>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> PayPremium — Tous droits réservés
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
